@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="/public/images/wrench.png">
+    <title>Openshift Shop</title>
+    <base href="<?= ROOT_URL ?>/">
+    <link rel="stylesheet" href="public/css/app.css?ver=1.5">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Icons (fontawesome) -->
+    <script src="https://kit.fontawesome.com/75d5cdc9c3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Openshift Shop</h1>
+            <!-- Animation folgt...-->
+            <div class="filter">
+                <a class="button" href="werkstatt">Aufträge</a>
+            </div>
+        </div>
+        <!-- Auflistung -->
+        <div class="auftrag auftragTitel" style='animation-delay:0s;'>
+            <p>Name</p>
+            <p>Dringlichkeit</p>
+            <p>Status</p>
+            <p>Frist</p>
+        </div>
+        <div>
+        </div>
+        <!-- Fehler Anzeige -->
+        <div class='fehler' style='display:none;' onclick="$(this).css('display', 'none')"><ul id='fehler'></ul></div>
+        <!-- Mehrfachauswahl-Speichern und erfassen button -->
+        <div class="newAuftrag" onclick="newAuftrag();"><i class="fa-solid fa-plus"></i></div>
+        <div class="saveAuftraege" onclick="editAuftragStatus();"><i class="fa-solid fa-check-double"></i></div>
+        <!-- Formulare Hintergrund -->
+        <div class="transparentBg" onclick="closeContent('.newAuftragContent');closeContent('.transparentBg');closeContent('.editAuftragContent');"></div>
+        <!-- Erfassungsformular -->
+    </div>
+
+    <script src="public/js/app.js"></script>
+</body>
+</html>
