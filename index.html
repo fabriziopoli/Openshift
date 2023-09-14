@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image" href="/public/images/wrench.png">
     <title>Openshift Shop</title>
-    <base href="<?= ROOT_URL ?>/">
+    <base href="/">
     <link rel="stylesheet" href="public/css/app.css?ver=1.5">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -14,32 +14,47 @@
     <script src="https://kit.fontawesome.com/75d5cdc9c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Openshift Shop</h1>
-            <!-- Animation folgt...-->
-            <div class="filter">
-                <a class="button" href="werkstatt">Aufträge</a>
-            </div>
-        </div>
-        <!-- Auflistung -->
-        <div class="auftrag auftragTitel" style='animation-delay:0s;'>
-            <p>Name</p>
-            <p>Dringlichkeit</p>
-            <p>Status</p>
-            <p>Frist</p>
-        </div>
-        <div>
-        </div>
-        <!-- Fehler Anzeige -->
-        <div class='fehler' style='display:none;' onclick="$(this).css('display', 'none')"><ul id='fehler'></ul></div>
-        <!-- Mehrfachauswahl-Speichern und erfassen button -->
-        <div class="newAuftrag" onclick="newAuftrag();"><i class="fa-solid fa-plus"></i></div>
-        <div class="saveAuftraege" onclick="editAuftragStatus();"><i class="fa-solid fa-check-double"></i></div>
-        <!-- Formulare Hintergrund -->
-        <div class="transparentBg" onclick="closeContent('.newAuftragContent');closeContent('.transparentBg');closeContent('.editAuftragContent');"></div>
-        <!-- Erfassungsformular -->
-    </div>
+	<header>
+		<a href="/" title="Home"><img src="public/img/Openshift Logo Schwarz.png" alt="Logo" /></a>
+		<div>
+			<menu>
+				<button class="menubutton-close" onclick="$('menu').removeClass('open')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
+				<a href="/" class="active" title="Home">Home</a>
+				<a href="/shop" title="Shop">Shop</a>
+				<a href="/about_us" title="About Us">About Us</a>
+			</menu>
+			<a href="/cart" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+			<button class="menubutton" onclick="$('menu').addClass('open')"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5"></rect><rect x="4" y="15" width="16" height="1.5"></rect></svg></button>
+		</div>
+	</header>
+
+	<div class="title-image"></div>
+
+	<main>
+
+	</main>
+
+	<footer>
+		<div class="social">
+			<a>Instagram</a>
+			<a>X</a>
+			<a>Tiktok</a>
+			<a>Facebook</a>
+		</div>
+		<div class="contact">
+			<form>
+				<label>Name: <input type="text" name="name" required/></label>
+				<label>E-Mail: <input type="text" name="email" required/></label>
+				<label class="textarea">Nachricht: <textarea name="message" required></textarea></label>
+				<button type="submit" name="submit-contact" class="button">Senden</button>
+			</form>
+		</div>
+		<div class="links">
+			<a href="" title="Impressum">Impressum</a>
+			<a href="" title="Datenschutz">Datenschutz</a>
+			<a href="" title="AGB">AGB</a>
+		</div>
+	</footer>
 
     <script src="public/js/app.js"></script>
 </body>
