@@ -186,7 +186,7 @@ main {
     max-width: 1024px;
     margin: 0 auto;
     padding: 20px;
-    height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
 }
 
 .title-image {
@@ -201,6 +201,11 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+}
+
+.abstand {
+    height: 50px;
+    width: 100%;
 }
 
 /* footer */
@@ -286,6 +291,36 @@ footer .links {
 
 .product-btn {
     grid-area: button;
+}
+
+/* persons */
+
+.person {
+    background-color: var(--color-pink);
+    padding: 20px;
+    border-radius: 13px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: 170px 35px 15px;
+}
+
+.person-img {
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0px 25px 20px;
+}
+
+.person-name {
+    font-size: 20px;
+    text-align: center;
+}
+
+.person-function {
+    font-size: smaller;
+    text-align: center;
+    opacity: .6;
 }
 
 /* media queries */
