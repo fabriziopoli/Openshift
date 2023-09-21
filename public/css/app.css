@@ -100,12 +100,6 @@ menu a:hover, menu a.active {
     opacity: .7;
 }
 
-/* main */
-main {
-    max-width: 1024px;
-    height: calc(100vh - 120px);
-}
-
 
 /* Text */
 h1, h2, h3 {
@@ -123,6 +117,10 @@ h2 {
 
 h3 {
     font-size: 24px;
+}
+
+.center {
+    text-align: center;
 }
 
 /* buttons */
@@ -159,13 +157,135 @@ a:hover {
     font-size: 24px;
 }
 
+/* inputs */
+input:not([type=checkbox]):not([type=radio]), select, textarea {
+    width: 100%;
+    min-width: 100px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--color-dark-black);
+    padding: 5px 10px;
+    margin: 5px 0 10px;
+    outline: none;
+    box-sizing: border-box;
+	resize: vertical;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+input:not([type=checkbox]):not([type=radio]):hover, select:hover, textarea:hover,
+input:not([type=checkbox]):not([type=radio]):focus, select:focus, textarea:focus {
+    border: 1px solid var(--color-trans-black);
+    opacity: .7;
+}
+
 /* main */
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    height: calc(100vh - 120px);
+}
+
 .title-image {
-    background-image: url(../img/Titelbild-v3.png);
     height: 65vh;
     width: 100vw;
     background-size: cover;
     background-position: center;
+}
+
+.holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--color-pink);
+    padding: 50px 20px;
+}
+
+footer>div {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+footer h2 {
+    margin: 0;
+}
+
+footer i {
+    font-size: 24px;
+}
+
+footer .social {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+footer .contact {
+    margin: 0 auto 50px;
+    max-width: 512px;
+}
+
+footer .links {
+    display: flex;
+    gap: 0 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* products */
+
+.product {
+    background-color: var(--color-pink);
+    padding: 20px;
+    border-radius: 13px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 170px 35px 25px 40px;
+    grid-template-areas: "image image"
+        "title title"
+        "price stock"
+        "button button";
+}
+
+.product-img {
+    grid-area: image;
+    background-size: cover;
+    background-position: center;
+    margin: -20px -20px 15px -20px;
+}
+
+.product-name {
+    grid-area: title;
+    font-size: 20px;
+    text-align: center;
+}
+
+.product-price {
+    grid-area: price;
+    font-size: smaller;
+    opacity: .6;
+}
+
+.product-stock {
+    grid-area: stock;
+    font-size: smaller;
+    opacity: .6;
+    text-align: right;
+}
+
+.product-btn {
+    grid-area: button;
 }
 
 /* media queries */

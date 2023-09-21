@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="/public/images/wrench.png">
+    <link rel="icon" type="image" href="/public/img/Openshift Logo Schwarz.png">
     <title>Openshift Shop</title>
     <base href="/">
-    <link rel="stylesheet" href="public/css/app.css?ver=1.5">
+    <link rel="stylesheet" href="/public/css/app.css?ver=1.5">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Icons (fontawesome) -->
@@ -15,7 +15,7 @@
 </head>
 <body>
 	<header>
-		<a href="/" title="Home"><img src="public/img/Openshift Logo Schwarz.png" alt="Logo" /></a>
+		<a href="/" title="Home"><img src="/public/img/Openshift Logo Schwarz.png" alt="Logo" /></a>
 		<div>
 			<menu>
 				<button class="menubutton-close" onclick="$('menu').removeClass('open')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
@@ -28,34 +28,46 @@
 		</div>
 	</header>
 
-	<div class="title-image"></div>
+	<div class="title-image" style="background-image: url(/public/img/Titelbild-v3.png)"></div>
 
 	<main>
-
+		<h1 class="center">Das ist ein Titel</h1>
+		<div class="holder">
+			<div class="product">
+				<div class="product-img" style="background-image: url(), url(/public/img/not-found.webp);"></div>
+				<span class="product-name">Produkt Bez.</span>
+				<span class="product-price">10.- CHF</span>
+				<span class="product-stock">10 Auf Lager</span>
+				<a class="button product-btn">Zum Artikel</a>
+			</div>
+		</div>
 	</main>
 
 	<footer>
-		<div class="social">
-			<a>Instagram</a>
-			<a>X</a>
-			<a>Tiktok</a>
-			<a>Facebook</a>
-		</div>
-		<div class="contact">
-			<form>
-				<label>Name: <input type="text" name="name" required/></label>
-				<label>E-Mail: <input type="text" name="email" required/></label>
-				<label class="textarea">Nachricht: <textarea name="message" required></textarea></label>
-				<button type="submit" name="submit-contact" class="button">Senden</button>
-			</form>
-		</div>
-		<div class="links">
-			<a href="" title="Impressum">Impressum</a>
-			<a href="" title="Datenschutz">Datenschutz</a>
-			<a href="" title="AGB">AGB</a>
+		<div>
+			<div class="social">
+				<a><i class="fa-brands fa-instagram"></i></a>
+				<a><i class="fa-brands fa-x-twitter"></i></a>
+				<a><i class="fa-brands fa-tiktok"></i></a>
+				<a><i class="fa-brands fa-facebook"></i></a>
+			</div>
+			<div class="contact">
+				<h2>Kontakt</h2>
+				<form>
+					<label>Name: <input type="text" name="name" required/></label>
+					<label>E-Mail: <input type="text" name="email" required/></label>
+					<label class="textarea">Nachricht: <textarea name="message" required></textarea></label>
+					<button type="submit" name="submit-contact" class="button">Senden</button>
+				</form>
+			</div>
+			<div class="links">
+				<a href="" title="Impressum">Impressum</a>
+				<a href="" title="Datenschutz">Datenschutz</a>
+				<a href="" title="AGB">AGB</a>
+			</div>
 		</div>
 	</footer>
 
-    <script src="public/js/app.js"></script>
+    <script src="/public/js/app.js"></script>
 </body>
 </html>
