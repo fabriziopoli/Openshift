@@ -157,6 +157,12 @@ a:hover {
     font-size: 24px;
 }
 
+main > .button {
+    margin: 0 auto;
+    display: block;
+    max-width: 200px;
+}
+
 /* inputs */
 input:not([type=checkbox]):not([type=radio]), select, textarea {
     width: 100%;
@@ -321,6 +327,37 @@ footer .links {
     font-size: smaller;
     text-align: center;
     opacity: .6;
+}
+
+/* cart */
+.cart-item {
+    display: grid;
+    grid-template-columns: 120px 1fr 100px 30px;
+    grid-template-rows: 80px;
+    max-width: 700px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid var(--color-black);
+}
+
+.cart-img {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.cart-delete {
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+.cart-delete:hover {
+    opacity: .4;
 }
 
 /* media queries */
