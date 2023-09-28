@@ -129,6 +129,7 @@ a {
     text-decoration: underline;
     color: var(--color-black);
     cursor: pointer;
+    position: relative;
 }
 
 a:hover {
@@ -332,7 +333,7 @@ footer .links {
 /* cart */
 .cart-item {
     display: grid;
-    grid-template-columns: 120px 1fr 100px 30px;
+    grid-template-columns: 120px 1fr 30px 100px 30px;
     grid-template-rows: 80px;
     max-width: 700px;
     margin: 0 auto;
@@ -358,6 +359,26 @@ footer .links {
 
 .cart-delete:hover {
     opacity: .4;
+}
+
+.cart-empty {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+#anz_artikel {
+    text-decoration: none;
+    background: red;
+    color: var(--color-white);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
 }
 
 /* media queries */
