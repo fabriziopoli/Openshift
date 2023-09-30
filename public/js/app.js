@@ -8,7 +8,9 @@ function addArtikel(id) {
             artikel_id: id,
         },
         success: function (data) {
-            $('#anz_artikel')
+            data = JSON.parse(data);
+            $('#anz_artikel').text(data.anz_artikel);
+            $('#anz_artikel').show();
         },
         error: function (xhr, status, error) {
             console.error('Fehler: ' + status + ' - ' + error);

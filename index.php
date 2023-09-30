@@ -30,7 +30,7 @@ foreach($anz_artikel as $a) { $anz_artikel = $a['anz_artikel']; }
 				<a href="/openshift/app/shop.php" title="Shop">Shop</a>
 				<a href="/openshift/app/about_us.php" title="About Us">About Us</a>
 			</menu>
-			<a href="/openshift/app/cart.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i><?= '<span id="anz_artikel">'.$anz_artikel.'</span>' ?></a>
+			<a href="/openshift/app/cart.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i><span id="anz_artikel" <?= $anz_artikel == 0 ? 'style="display:none;"' : '' ?>><?= $anz_artikel ?></span></a>
 			<button class="menubutton" onclick="$('menu').addClass('open')"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5"></rect><rect x="4" y="15" width="16" height="1.5"></rect></svg></button>
 		</div>
 	</header>
