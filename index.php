@@ -10,11 +10,11 @@ foreach($anz_artikel as $a) { $anz_artikel = $a['anz_artikel']; }
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="/openshift/public/img/Openshift Logo Schwarz.png">
+    <link rel="icon" type="image" href="/public/img/Openshift Logo Schwarz.png">
     <title>Openshift Shop</title>
-    <base href="/openshift/">
-    <link rel="stylesheet" href="/openshift/public/css/app.css?ver=1.5">
-    <script src="/openshift/public/js/app.js?ver=1.5"></script>
+    <base href="/">
+    <link rel="stylesheet" href="/public/css/app.css?ver=1.5">
+    <script src="/public/js/app.js?ver=1.5"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Icons (fontawesome) -->
@@ -22,20 +22,20 @@ foreach($anz_artikel as $a) { $anz_artikel = $a['anz_artikel']; }
 </head>
 <body>
 	<header>
-		<a href="/openshift/" title="Home"><img src="/openshift/public/img/Openshift Logo Schwarz.png" alt="Logo" /></a>
+		<a href="/" title="Home"><img src="/public/img/Openshift Logo Schwarz.png" alt="Logo" /></a>
 		<div>
 			<menu>
 				<button class="menubutton-close" onclick="$('menu').removeClass('open')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M13 11.8l6.1-6.3-1-1-6.1 6.2-6.1-6.2-1 1 6.1 6.3-6.5 6.7 1 1 6.5-6.6 6.5 6.6 1-1z"></path></svg></button>
-				<a href="/openshift/" class="active" title="Home">Home</a>
-				<a href="/openshift/app/shop.php" title="Shop">Shop</a>
-				<a href="/openshift/app/about_us.php" title="About Us">About Us</a>
+				<a href="/" class="active" title="Home">Home</a>
+				<a href="/app/shop.php" title="Shop">Shop</a>
+				<a href="/app/about_us.php" title="About Us">About Us</a>
 			</menu>
-			<a href="/openshift/app/cart.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i><span id="anz_artikel" <?= $anz_artikel == 0 ? 'style="display:none;"' : '' ?>><?= $anz_artikel ?></span></a>
+			<a href="/app/cart.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i><span id="anz_artikel" <?= $anz_artikel == 0 ? 'style="display:none;"' : '' ?>><?= $anz_artikel ?></span></a>
 			<button class="menubutton" onclick="$('menu').addClass('open')"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="7.5" width="16" height="1.5"></rect><rect x="4" y="15" width="16" height="1.5"></rect></svg></button>
 		</div>
 	</header>
 
-	<div class="title-image" style="background-image: url(/openshift/public/img/Titelbild-v5.png)"></div>
+	<div class="title-image" style="background-image: url(/public/img/Titelbild-v5.png)"></div>
 
 	<main>
 		<h1 class="center">Lorem ipsum</h1>
@@ -54,7 +54,7 @@ foreach($anz_artikel as $a) { $anz_artikel = $a['anz_artikel']; }
 			foreach($products as $p) {
 			?>
 				<div class="product">
-					<div class="product-img" style="background-image: url(/openshift/public/img/<?= $p['bild'] ?>), url(/openshift/public/img/not-found.webp);"></div>
+					<div class="product-img" style="background-image: url(/public/img/<?= $p['bild'] ?>), url(/public/img/not-found.webp);"></div>
 					<span class="product-name"><?= $p['name'] ?></span>
 					<span class="product-price"><?= $p['preis'] ?> CHF</span>
 					<span class="product-stock"> Auf Lager</span>
@@ -65,7 +65,7 @@ foreach($anz_artikel as $a) { $anz_artikel = $a['anz_artikel']; }
 			?>
 		</div>
 		<div class="abstand"></div>
-		<a class="button" href="/openshift/app/shop.php">Mehr Produkte</a>
+		<a class="button" href="/app/shop.php">Mehr Produkte</a>
 		<div class="abstand"></div>
 	</main>
 

@@ -1,6 +1,6 @@
 function addArtikel(id) {
     $.ajax({
-        url: '/openshift/scripts.php',
+        url: '/scripts.php',
         method: 'POST',
         cache: false,
         data: {
@@ -20,7 +20,7 @@ function addArtikel(id) {
 
 function bestellen() {
     $.ajax({
-        url: '/openshift/scripts.php',
+        url: '/scripts.php',
         method: 'POST',
         cache: false,
         data: {
